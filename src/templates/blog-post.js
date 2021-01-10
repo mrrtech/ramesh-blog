@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
 console.log(post)
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
+      <SEO className="postTitle"
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
