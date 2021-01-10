@@ -9,7 +9,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-
+console.log(post)
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>{post.frontmatter.date}</p> 
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
